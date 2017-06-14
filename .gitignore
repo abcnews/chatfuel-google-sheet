@@ -1,0 +1,4 @@
+node_modules
+secrets.env
+google-sheets-collation
+test/literals/chatfuel-google-sheet

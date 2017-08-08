@@ -1,4 +1,5 @@
 const sheet = require('./lib/sheet');
+const createRows = require('./lib/createRows');
 const querystring = require('querystring');
 
 module.exports = {
@@ -6,12 +7,10 @@ module.exports = {
     const config = event.queryStringParameters;
     const body = querystring.parse(event.body);
 
-    let rows = Object.keys(body).map(key => body[key]);
     const sheetId = config.id;
+    const rows = createRows(config, body);
 
     if (!sheetId) return callback(null, { statusCode: 200, body: 'Specify a spreadsheet with ?id=xxx' });
-
-    if (!rows.length) rows = ['No POST attributes sent'];
 
     sheet.append(sheetId, rows, (error) => {
       if (error) console.error(error);

@@ -13,7 +13,7 @@ This app is intended for use in AWS Lambda. General setup:
 3. Expose via a web gateway
 4. Set up in Chatfuel as a JSON API card
   * Configure this as a POST endpoint
-  * Send through and Cahtfule attributes you wish. Each attribute will be added to a new column in the doc.
+  * Send through and Chatfuel attributes you wish. Each attribute will be added to a new column in the doc.
   * Add a query param to the url to let the endpoint know which sheet to send to. Eg. `?id=123` where 123 is the id of the sheet, as found in the url.
 
 Environment variables

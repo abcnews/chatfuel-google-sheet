@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./run.sh",
     "test": "mocha test/**"
   },
   "author": "",
@@ -20,7 +19,6 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "fliteral": "^1.1.0",
-    "mocha": "^3.5.0",
-    "mockery": "^2.1.0"
+    "mocha": "^3.5.0"
   }
 }
